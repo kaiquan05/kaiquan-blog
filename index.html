@@ -136,6 +136,53 @@
     </div>
     <div class="center-text">
         <h1>Week 7 blog</h1>
+        <p>In this week, I have learnt how to use mouse events and validation for inputs!</p>
+        <form onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" onblur="validateUsername()" onmouseover="changeCursor(this)" onmouseout="changeCursorBack()">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" onblur="validateEmail()" onmouseover="changeCursor(this)" onmouseout="changeCursorBack()">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" onblur="validatePassword()" onmouseover="changeCursor(this)" onmouseout="changeCursorBack()">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+          
+        <script>
+          function validateForm() {
+            let isValid = true;
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            if (username.length < 6) {
+            alert("Username must be at least 6 characters long");
+            isValid = false;
+            }
+            
+            if (!email.includes("@")) {
+            alert("Invalid email address");
+            isValid = false;
+            }
+            
+            if (password.length < 8) {
+            alert("Password must be at least 8 characters long");
+            isValid = false;
+            }
+            
+            return isValid;
+            }
+          
+          function changeCursor(input) {
+            input.style.cursor = "pointer";
+          }
+          
+          function changeCursorBack() {
+            document.body.style.cursor = "default";
+          }
+        </script>
     </div>
 </body>
 </html>
