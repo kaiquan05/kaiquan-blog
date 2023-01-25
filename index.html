@@ -2,7 +2,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
     </head>
     <body>
         <h1>Week 1 blog</h1>
@@ -72,20 +71,71 @@
     </div>
     <div class="center-text">
         <h1>Week 5 blog</h1>
-        <p>In this week, I learnt some basic javascript like using variables such as "var", "let", or "const" keywords.</p>
-        <input type="text" id="name" placeholder="Enter your name">
-        <button onclick="displayName()">Submit</button>
+        <p>This week, I learnt how to make a simple greeting using javascript!</p>
+        <input type="text" id="name1" placeholder="Enter your name">
+        <button type="button" onclick='displayName()'>Submit</button>
         <p id="greeting"></p>
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                displayName();
-            });
-            function displayName() {
-                let name = document.getElementById("name").value;
-                let greeting = document.getElementById("greeting");
-                greeting.innerHTML = "Hello, " + name + "!";
-            }
+        function displayName() {
+        let name = document.getElementById("name1").value;
+        let greeting = document.getElementById("greeting");
+        if(name != ""){
+            greeting.innerHTML = "Hello, " + name + "!";
+        }
+        return false;
+        }
         </script>
+    </div>
+    <div class="center-text">
+        <h1>Week 6 blog</h1>
+        <p>This week, I learnt how to create javascript objects</p>
+        <div id="singer1" data-name="Adele" data-genre="Pop" data-albums='["19","21","25"]'>
+        </div>
+        <input type="text" id="singer-name" placeholder="Enter singer's name">
+        <input type="text" id="singer-genre" placeholder="Enter singer's genre">
+        <input type="text" id="album-name" placeholder="Enter album name">
+        <button id="submit-btn" onclick="submitChanges()">Submit</button>
+        <button id="print-btn" onclick="printSinger()">Print Singer's details</button>
+        <div id="singer-details"></div>
+        <script>
+        let singer = {
+        name: document.getElementById("singer1").dataset.name,
+        genre: document.getElementById("singer1").dataset.genre,
+        albums: JSON.parse(document.getElementById("singer1").dataset.albums)
+        };
+
+        function updateName() {
+        let nameInput = document.getElementById("singer-name");
+        singer.name = nameInput.value;
+        document.getElementById("singer1").dataset.name = nameInput.value;
+        }
+
+        function updateGenre() {
+        let genreInput = document.getElementById("singer-genre");
+        singer.genre = genreInput.value;
+        document.getElementById("singer1").dataset.genre = genreInput.value;
+        }
+
+        function addAlbum() {
+        let albumInput = document.getElementById("album-name");
+        singer.albums.push(albumInput.value);
+        document.getElementById("singer1").dataset.albums = JSON.stringify(singer.albums);
+        }
+
+        function submitChanges() {
+        updateName();
+        updateGenre();
+        addAlbum();
+        }
+
+        function printSinger() {
+        let singerDetails = `Name: ${singer.name} <br> Genre: ${singer.genre} <br> Albums: ${singer.albums.join(", ")}`;
+        document.getElementById("singer-details").innerHTML = singerDetails;
+        }
+        </script>
+    </div>
+    <div class="center-text">
+        <h1>Week 7 blog</h1>
     </div>
 </body>
 </html>
