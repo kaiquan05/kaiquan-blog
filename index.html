@@ -1,13 +1,91 @@
+<!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
     <body>
         <h1>Week 1 blog</h1>
         <p>I have learnt html and css!</p>
-
-        <h1>Week 2 blog</h1>
-        <p>I have learnt html semantic  and semantic css such as "nav", "header" , "article" , "section" , "aside" </p>
-
-        <h1>Week 3 blog</h1>
-        <p>I have learnt advanced css layout to help me format my html 5 </p>
-    </body>
+        <p>In this week, I learnt how to add</p>
+        <p style="color: blue;">Colors</p>
+        <p>into my text.</p>
+        <h1 style="text-align:center">Week 2 blog</h1>
+        <p style="text-align:center">I have learnt html semantic and semantic css such as "nav", "header" , "article" , "section" , "aside".</p>
+        <p style="text-align:center">I have learnt how to center text as well!</p>
+        <p style="color: blue;text-align:center;">In HTML and css, nav is used to create a navigation menu.</p>
+        <p style="color: red;text-align:center;">header is used for the container of introductory content or a set of navigational links</p>
+        <p style="color: green;text-align:center;">article tag is used to group together content that makes sense on its own</p>
+        <p style="color: peru;text-align:center;">section tag is used to group together thematically related content</p>
+        <p style="color: pink;text-align:center;">aside tag is used to group together content that is related to the main content but not essential to it.</p>
+        <div class="center-text">
+            <h1>Week 3 blog</h1>
+            <p>This week, I have learnt how to create inputs for users!</p>
+            <p>I have also learnt how to use CSS to style my texts and pictures!</p>
+            <div style="display: flex;">
+                <div style="flex: 1;">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name">
+                  <p style="font-size: 12px;">Please enter your full name</p>
+                </div>
+                <div style="flex: 1;">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email">
+                  <p style="font-size: 12px;">Please enter your email address</p>
+                </div>
+                <div style="flex: 1;">
+                  <label for="phone">Phone:</label>
+                  <input type="tel" id="phone" name="phone">
+                  <p style="font-size: 12px;">Please enter your phone number</p>
+                </div>
+              </div>
+        </div>
+        <div class="picture-container">
+            <img src="https://picsum.photos/200/100" alt="image">
+            <div class="text-container">
+                <p>Example of styling in CSS.</p>
+            </div>
+        </div>
+        <div class="center-text">
+            <h1>Week 4 blog</h1>
+            <p>This week, I have learnt how to make responsive images!</p>
+            <div class="image-container">
+                <div class="img-text-container">
+                  <img src="https://picsum.photos/100/200" alt="image1">
+                  <div class="text-container">
+                    <p>Example text for image 1</p>
+                  </div>
+                </div>
+                <div class="img-text-container">
+                  <img src="https://picsum.photos/100/200" alt="image2">
+                  <div class="text-container">
+                    <p>Example text for image 2</p>
+                  </div>
+                </div>
+                <div class="img-text-container">
+                  <img src="https://picsum.photos/100/200" alt="image3">
+                  <div class="text-container">
+                    <p>Example text for image 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center-text">
+        <h1>Week 5 blog</h1>
+        <p>In this week, I learnt some basic javascript like using variables such as "var", "let", or "const" keywords.</p>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button onclick="displayName()">Submit</button>
+        <p id="greeting"></p>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                displayName();
+            });
+            function displayName() {
+                let name = document.getElementById("name").value;
+                let greeting = document.getElementById("greeting");
+                greeting.innerHTML = "Hello, " + name + "!";
+            }
+        </script>
+    </div>
+</body>
 </html>

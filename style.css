@@ -1,0 +1,37 @@
+.center-text {
+    text-align: center;
+ }
+
+ .picture-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture-container img {
+    width: 30%;
+    margin-right: 10px;
+}
+
+.text-container {
+    width: 70%;
+    text-align: center;
+    padding:10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-container img {
+    width: 100px;
+    height: 200px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.text-container {
+    padding: 10px;
+}
