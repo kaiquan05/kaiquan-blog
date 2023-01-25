@@ -106,9 +106,12 @@
 
         function updateName() {
         let nameInput = document.getElementById("singer-name");
-        singer.name = nameInput.value;
-        document.getElementById("singer1").dataset.name = nameInput.value;
+        if(nameInput != ""){
+            singer.name = nameInput.value;
+            document.getElementById("singer1").dataset.name = nameInput.value;
         }
+        }
+        
 
         function updateGenre() {
         let genreInput = document.getElementById("singer-genre");
