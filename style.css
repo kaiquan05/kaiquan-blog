@@ -58,3 +58,5 @@ background-color: blue;
 .yellow {
 background-color: yellow;
 }
+
+div[class^='col']{border: 1px solid red;}
