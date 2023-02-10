@@ -74,19 +74,23 @@
     <div class="center-text">
         <h1>Week 5 blog</h1>
         <p>This week, I learnt how to make a simple greeting using javascript!</p>
-        <input type="text" id="name1" placeholder="Enter your name">
-        <button type="button" onclick='displayName()'>Submit</button>
+        <input type="text" id="name10101010" placeholder="Enter your name">
+        <button type="button" id="submitButton">Submit</button>
         <p id="greeting"></p>
+
         <script>
-        function displayName() {
-        let name = document.getElementById("name1").value;
-        let greeting = document.getElementById("greeting");
-        if(name != ""){
-            greeting.innerHTML = "Hello, " + name + "!";
-        }
-        return false;
-        }
+          document.getElementById("submitButton").addEventListener("click", function() {
+            var name = document.getElementById("name10101010").value;
+            console.log(name);
+            var greeting = document.getElementById("greeting");
+            if (name.trim() !== "") {
+              greeting.innerHTML = "Hello, " + name + "!";
+            } else {
+              greeting.innerHTML = "";
+            }
+          });
         </script>
+
     </div>
     <div class="center-text">
         <h1>Week 6 blog</h1>
@@ -242,7 +246,7 @@
         <h4>Introduction to my responsive image </h4>
         <div class="container">
           <!-- swap to fluid containers, meaning 100% width -->
-          <!-- <div class="container-fluid">-->
+          <div class="container-fluid">
           <div class="row">
             <div class="col">
               <img src="https://picsum.photos/200/300
@@ -364,14 +368,15 @@
     <div>
       <div class="animation-center" style="background-color:blue">
         <div style="display:block;">
-          <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_b88nh30c.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+          <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_h21ObQ.json" background="transparent"
+          speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
         </div>
   
       </div>
       <div class="loading-text">Searching the world...Please wait<br/> (redirect after 1min, works only on external window)</div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <div class="center-text">
     <h1>Week 15 & 16</h1>
     <p>Assignment week!!</p>
